@@ -19,33 +19,41 @@
     mc:Ignorable="d" d:DesignWidth="480" d:DesignHeight="768"
     FontFamily="{StaticResource PhoneFontFamilyNormal}"
     FontSize="{StaticResource PhoneFontSizeNormal}"
-    Foreground="{StaticResource PhoneForegroundBrush}"
     SupportedOrientations="Portrait" Orientation="Portrait"
-    shell:SystemTray.IsVisible="True">
+    shell:SystemTray.IsVisible="True" Foreground="{x:Null}">
 
     <!--LayoutRoot is the root grid where all page content is placed-->
-    <Grid x:Name="LayoutRoot" Background="Transparent">
+    <Grid x:Name="LayoutRoot">
+        <Grid.Background>
+            <ImageBrush ImageSource="/Images/background.png" Stretch="UniformToFill"/>
+        </Grid.Background>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
         <!--TitlePanel contains the name of the application and page title-->
-        <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="12,17,0,28">
-            <TextBlock x:Name="ApplicationTitle" Text="ONLINE RADIO" Style="{StaticResource PhoneTextNormalStyle}" HorizontalAlignment="Left"/>
-            <TextBlock x:Name="PageTitle" Text="PURE WAVE" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}" HorizontalAlignment="Center"/>
+        <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="0,30,0,0">
+            <TextBlock x:Name="ApplicationTitle" Text="ONLINE RADIO" Style="{StaticResource PhoneTextNormalStyle}" HorizontalAlignment="Left" Visibility="Collapsed"/>
+            <TextBlock x:Name="PageTitle" Text="PURE WAVE" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}" HorizontalAlignment="Center" Visibility="Collapsed"/>
+            <Image x:Name="image" Height="80" Margin="0" Width="200" Source="/Images/logo.png" VerticalAlignment="Top"/>
         </StackPanel>
 
         <!--ContentPanel - place additional content here-->
-        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
-            <StackPanel Orientation="Horizontal" Margin="18,40,18,0" VerticalAlignment="Top" HorizontalAlignment="Center">
-                <Button Content="PLAY" x:Name="playButton" Height="140" Width="280" Click="playButton_Click"/>
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="0">
+            <StackPanel Margin="0,140,0,0" VerticalAlignment="Top" HorizontalAlignment="Center" Orientation="Horizontal">
+                <Button Content="" x:Name="playButton" Height="170" Width="170" Click="playButton_Click" BorderThickness="0">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/Images/play.png" Stretch="UniformToFill"/>
+                    </Button.Background>
+                </Button>
             </StackPanel>
-            <TextBlock x:Name="txtCurrentTrack" Height="75" HorizontalAlignment="Center" Margin="12,193,12,10" VerticalAlignment="Top" Width="438" TextWrapping="Wrap" TextAlignment="Center" FontSize="21.333" />
-            <StackPanel Visibility="Collapsed" Orientation="Horizontal" Margin="18,180,18,0" VerticalAlignment="Top" HorizontalAlignment="Center" >
+            <TextBlock x:Name="txtCurrentTrack" Height="50" HorizontalAlignment="Center" Margin="0,320,0,0" VerticalAlignment="Top" TextWrapping="Wrap" TextAlignment="Center" FontSize="21.333" Grid.ColumnSpan="2" Width="300" />
+            <StackPanel Visibility="Collapsed" Orientation="Horizontal" Margin="228,180,134.627,0" VerticalAlignment="Top" HorizontalAlignment="Center" >
                 <Button Content="|&lt;&lt;" x:Name="prevButton" Height="140" Width="140" Click="prevButton_Click"/>
                 <Button Content="&gt;&gt;|" x:Name="nextButton" Height="140" Width="140" Click="nextButton_Click"/>
             </StackPanel>
+            <Button x:Name="button" Content="HTTPS://VK.COM/PURE_WAVE" HorizontalAlignment="Center" Margin="0,0,0,60" VerticalAlignment="Bottom" BorderThickness="3,7,3,5" FontSize="18.667" FontFamily="DengXian" Background="#FFA8389E" BorderBrush="#FFA8389E"/>
         </Grid>
     </Grid>
 </phone:PhoneApplicationPage>

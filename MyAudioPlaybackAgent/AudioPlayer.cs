@@ -33,30 +33,30 @@ namespace MyAudioPlaybackAgent
                             "Pure Wave",
                             "Радио Чистая Волна",
                             "Internet Podcast",
-                            new Uri("Images/Episode29.jpg", UriKind.)),
+                            new Uri("shared/media/logo.png", UriKind.Relative)),
 
-            //new audiotrack(new uri("ring01.wma", urikind.relative),
+            //new AudioTrack(new Uri("ring01.wma", UriKind.Relative),
             //                "ringtone 1",
             //                "windows phone",
             //                "windows phone ringtones",
-            //                new uri("shared/media/ring01.jpg", urikind.relative)),
+            //                new Uri("shared/media/ring01.jpg", UriKind.Relative)),
 
-            //new audiotrack(new uri("ring02.wma", urikind.relative),
+            //new AudioTrack(new Uri("ring02.wma", UriKind.Relative),
             //                "ringtone 2",
             //                "windows phone",
             //                "windows phone ringtones",
-            //                new uri("shared/media/ring02.jpg", urikind.relative)),
+            //                new Uri("shared/media/ring02.jpg", UriKind.Relative)),
 
-            //new audiotrack(new uri("ring03.wma", urikind.relative),
+            //new AudioTrack(new Uri("ring03.wma", UriKind.Relative),
             //                "ringtone 3",
             //                "windows phone",
             //                "windows phone ringtones",
-            //                new uri("shared/media/ring03.jpg", urikind.relative)),
+            //                new Uri("shared/media/ring03.jpg", UriKind.Relative)),
 
             // A remote URI
-            //new AudioTrack(new Uri("http://traffic.libsyn.com/wpradio/WPRadio_29.mp3", UriKind.Absolute), 
-            //                "Episode 29", 
-            //                "Windows Phone Radio", 
+            //new AudioTrack(new Uri("http://traffic.libsyn.com/wpradio/WPRadio_29.mp3", UriKind.Absolute),
+            //                "Episode 29",
+            //                "Windows Phone Radio",
             //                "Windows Phone Radio Podcast",
             //                new Uri("shared/media/Episode29.jpg", UriKind.Relative))
         };

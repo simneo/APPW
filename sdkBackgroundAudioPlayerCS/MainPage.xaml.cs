@@ -36,7 +36,7 @@ namespace sdkBackgroundAudioPlayerCS
         {
             if (PlayState.Playing == BackgroundAudioPlayer.Instance.PlayerState)
             {
-                playButton.Content = "PAUSE";     // Change to pause button
+                //playButton.Content = "PAUSE";     // Change to pause button
                 txtCurrentTrack.Text = BackgroundAudioPlayer.Instance.Track.Title +
                                        " - " +
                                        BackgroundAudioPlayer.Instance.Track.Artist;
@@ -44,7 +44,7 @@ namespace sdkBackgroundAudioPlayerCS
             }
             else
             {
-                playButton.Content = "PLAY";     // Change to play button
+                //playButton.Content = "PLAY";     // Change to play button
                 txtCurrentTrack.Text = "";
             }
         }
@@ -60,14 +60,14 @@ namespace sdkBackgroundAudioPlayerCS
             switch (BackgroundAudioPlayer.Instance.PlayerState)
             {
                 case PlayState.Playing:
-                    playButton.Content = "PAUSE";     // Change to pause button
-                    prevButton.IsEnabled = true;
-                    nextButton.IsEnabled = true;
+                    //playButton.Content = "PAUSE";     // Change to pause button
+                    //prevButton.IsEnabled = true;
+                    //nextButton.IsEnabled = true;
                     break;
 
                 case PlayState.Paused:
                 case PlayState.Stopped:
-                    playButton.Content = "PLAY";     // Change to play button
+                    //playButton.Content = "PLAY";     // Change to play button
                     break;
             }
 
