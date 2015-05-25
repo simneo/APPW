@@ -37,6 +37,7 @@ namespace sdkBackgroundAudioPlayerCS
             if (PlayState.Playing == BackgroundAudioPlayer.Instance.PlayerState)
             {
                 //playButton.Content = "PAUSE";     // Change to pause button
+                //playButton.Background = bi image.SetValue(new Uri("/Images/stop.png"));
                 txtCurrentTrack.Text = BackgroundAudioPlayer.Instance.Track.Title +
                                        " - " +
                                        BackgroundAudioPlayer.Instance.Track.Artist;
